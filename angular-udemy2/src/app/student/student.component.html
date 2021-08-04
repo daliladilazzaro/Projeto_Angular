@@ -1,8 +1,13 @@
-<p>student works!</p>
+<!--<p>student works!</p>-->
 
-<div>
-    Student: {{name}}
-    <div [hidden]="!isProgrammer">
-        Programadora: acho que sim
+<div *ngIf="student">
+    Student: <a href="#" (click)="clicked()">{{student?.name}} </a>
+    <!--<div [hidden]="!student.isProgrammer">-->
+    <div *ngIf="student.isProgrammer">
+        Programadora: {{student.linguage}}<button (click)="description.focus()">Focus!</button><br/>
+        <textarea #description></textarea>
     </div>
 </div>
+<p *ngIf="!student">
+    Sem dados para exibir
+</p>

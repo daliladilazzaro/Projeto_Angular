@@ -1,9 +1,13 @@
-<h1>
+<!--<h1>
   {{title}}
-</h1>
+</h1>-->
 <jad-header></jad-header>
 
-<jad-student name="Lila" isProgrammer="true"></jad-student>
+<!--<jad-student name="Lila" [isProgrammer]="true"></jad-student>-->
+<!--<jad-student [student]="lila"></jad-student>-->
+<jad-student *ngFor="let estudante of students"[student]="estudante"></jad-student>
+<jad-student></jad-student>
+
 
 
 <!--
